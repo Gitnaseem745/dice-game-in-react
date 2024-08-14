@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className={styles.heroSection}>
         <div className={styles.heroImg}>
-            <img src="public\assets\dices 1.png" />
+            <img src="public\assets\dices_1.png" />
         </div>
         <div className={styles.heroText}>
             <h1>DICE GAME</h1>
