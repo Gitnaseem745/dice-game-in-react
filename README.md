@@ -22,6 +22,7 @@ In this project, the player rolls a dice after selecting a number from 1 to 6. I
 
 ## Live Demo
 
+![Demo Image](https://github.com/Gitnaseem745/dice-game-in-react/blob/main/public/assets/demoImage.png)
 
 Check out the live demo of the project here: [Dice Game](https://dice-game-in-react.vercel.app/)
 
