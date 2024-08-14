@@ -31,6 +31,7 @@ const GamePage = () => {
             setErrorMsg("");
         }else{
             setErrorMsg("Select Any Number To Play The Game");
+            return;
         }
         if(currentImgIndex == selectedNum){
             setScore(score + 1);
