@@ -59,7 +59,7 @@ const GamePage = () => {
             </div>
         </div>
         <div className={styles.diceContainer}>
-            <img src={`/src/assets/dice_${currentImg}.png`} onClick={onClickChangeCurrentImg} />
+            <img src={`./src/assets/dice_${currentImg}.png`} onClick={onClickChangeCurrentImg} />
             <p>Click on Dice to roll</p>
             <div className={styles.gameBtn}>
             <Button isOutline={true} btnText="Reset Score" onClick={onClickReset} />
