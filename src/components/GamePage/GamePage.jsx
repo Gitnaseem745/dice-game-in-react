@@ -6,11 +6,12 @@ import { diceOne } from '../../assets'
 
 const GamePage = () => {
 
-    const [score, setScore] = useState(10);
+    const [score, setScore] = useState(0);
     const [showRules, setShowRules] = useState(false);
     const [selectedNum, setSelectedNum] = useState();
     const [visible, setVisible] = useState("hidden");
     const [currentImg, setCurrentImg] = useState(1);
+    const [errorMsg, setErrorMsg] = useState('');
 
     const onClickReset = () => {
         setScore(0);
@@ -25,8 +26,19 @@ const GamePage = () => {
     }
     const onClickChangeCurrentImg = () => {
         let currentImgIndex = Math.floor(Math.random() * 6 + 1);
-        setCurrentImg(currentImgIndex);
+        if(selectedNum >= 1){
+            setCurrentImg(currentImgIndex);
+            setErrorMsg("");
+        }else{
+            setErrorMsg("Select Any Number To Play The Game");
+        }
+        if(currentImgIndex == selectedNum){
+            setScore(score + 1);
+        }else{
+            setScore(score - 1);
+        }
     }
+
 
   return (
     <section className={styles.gamePage}>
@@ -36,7 +48,7 @@ const GamePage = () => {
                 <p className={styles.scoreText}>Total Score</p>
             </div>
             <div className={styles.choseNum}>
-                <p className={styles.errorNum}>Select Any Number To Play The Game</p>
+                <p className={styles.errorNum}>{errorMsg}</p>
                 <div className={styles.nums}>
                 {nums.map((n, index) => (
                     <Number num={n} key={index} onClick={() => setSelectedNum(n)} isSelected={n === selectedNum}/>
