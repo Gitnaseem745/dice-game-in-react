@@ -1,26 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './GamePage.module.css'
 import Number from '../Numbers/Number'
 import Button from '../Button/Button'
 import { diceOne } from '../../assets'
 
 const GamePage = () => {
+
+    const [score, setScore] = useState(10);
+
+    const [visible, setVisible] = useState("hidden");
+
+    const onClickReset = () => {
+        setScore(0);
+    }
+
+    const onClickShowRules = () => {
+        setVisible("visible");
+        console.log(setVisible)
+    }
+
   return (
     <section className={styles.gamePage}>
         <div className={styles.scoreContainer}>
             <div className={styles.score}>
-                <p className={styles.scoreCount}>0</p>
+                <p className={styles.scoreCount}>{score}</p>
                 <p className={styles.scoreText}>Total Score</p>
             </div>
             <div className={styles.choseNum}>
                 <p className={styles.errorNum}>Trial Error</p>
                 <div className={styles.nums}>
-                <Number num={1} isOutline={true}/>
-                <Number num={2} isOutline={true}/>
-                <Number num={3} isOutline={true}/>
-                <Number num={4} isOutline={true}/>
-                <Number num={5} isOutline={true}/>
-                <Number num={6} isOutline={true}/>
+                {nums.map((n, index) => (
+                    <Number num={n} key={index} isOutline={true}/>
+                ))}
                 </div>
                 <p>Select Number</p>
             </div>
@@ -29,11 +40,11 @@ const GamePage = () => {
             <img src={diceOne} />
             <p>Click on Dice to roll</p>
             <div className={styles.gameBtn}>
-            <Button isOutline={true} btnText="Reset Score" />
-            <Button btnText="Check Rules" />
+            <Button isOutline={true} btnText="Reset Score" onClick={onClickReset} />
+            <Button btnText="Check Rules" onClick={onClickShowRules} />
             </div>
         </div>
-        <div className={styles.gameRules}>
+        <div className={`${styles.gameRules} ${visible}`}>
             <h2>How to play dice game</h2>
             <p>1. Select any number</p>
             <p>2. Click on dice image</p>
@@ -43,5 +54,7 @@ const GamePage = () => {
     </section>
   )
 }
+
+const nums = [1, 2, 3, 4, 5, 6];
 
 export default GamePage
