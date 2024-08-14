@@ -1,0 +1,6 @@
+.numberNorm{
+    @apply bg-black px-5 py-3 text-white text-[16px] rounded-sm font-semibold
+}
+.numberOut{
+    @apply bg-white px-5 py-3 text-black border-2 border-black text-[16px] rounded-sm font-semibold
+}

@@ -1,0 +1,6 @@
+.btn{
+    @apply self-end bg-black px-10 py-1 text-white text-[16px] rounded-sm max-sm:self-center
+}
+.oBtn{
+    @apply self-end bg-white hover:bg-black hover:text-white px-10 py-1 text-black border-2 border-black max-sm:self-center text-[16px] rounded-sm
+}

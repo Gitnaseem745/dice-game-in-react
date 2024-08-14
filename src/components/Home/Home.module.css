@@ -1,0 +1,12 @@
+.heroSection{
+    @apply max-w-full h-screen max-sm:h-[600px] flex justify-center items-center gap-4 p-10 flex-wrap flex-row
+}
+.heroImg{
+    @apply h-fit
+}
+.heroText{
+    @apply flex flex-col flex-wrap gap-4 items-start
+}
+.heroText h1{
+    @apply text-8xl font-bold max-sm:text-4xl
+}
