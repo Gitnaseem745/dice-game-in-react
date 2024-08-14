@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Number.module.css'
-const Number = ({num, isOutline, ...rest}) => {
+const Number = ({num, isSelected, ...rest}) => {
   return (
-    <button className={isOutline ? styles.numberOut : styles.numberNorm} {...rest}>{num}</button>
+    <button className={isSelected ?  styles.btnBlack : styles.btnWhite} {...rest}>{num}</button>
   )
 }
 

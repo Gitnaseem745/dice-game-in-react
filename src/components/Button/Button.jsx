@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 
 const Button = ({btnText, isOutline, ...rest}) => {
   return (
-    <button className={isOutline ? styles.oBtn : styles.btn} {...rest}>{btnText}</button>
+    <button className={isOutline ? styles.outlineBtn : styles.btn} {...rest}>{btnText}</button>
   )
 }
 

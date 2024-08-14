@@ -36,7 +36,7 @@
     @apply w-fit flex flex-col justify-center items-center gap-4 mt-3
 }
 .gameRules{
-    @apply flex gap-2 flex-wrap flex-col max-lg:px-6 max-sm:mt-[-100px] bg-pink-200 p-5 border-2 max-sm:m-4 hidden
+    @apply flex gap-2 flex-wrap flex-col max-lg:px-6 max-sm:mt-[-100px] bg-pink-200 p-5 border-2 max-sm:m-4
 }
 .gameRules h2{
     @apply text-xl font-bold pb-3
