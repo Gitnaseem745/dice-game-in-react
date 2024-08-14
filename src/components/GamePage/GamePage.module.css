@@ -1,0 +1,43 @@
+.gamePage{
+    @apply w-full flex justify-center items-center flex-col my-10 gap-y-20
+}
+
+.scoreContainer{
+    @apply flex w-10/12 max-h-[180px] justify-between items-center flex-wrap max-sm:justify-center
+}
+.score{
+    @apply flex justify-center items-center flex-col
+}
+.scoreCount{
+    @apply text-7xl font-bold px-5 py-1
+}
+.scoreText{
+    @apply text-xl font-semibold
+}
+.choseNum{
+    @apply flex items-end flex-col gap-4 flex-wrap
+}
+.errorNum{
+    @apply self-start text-red-500 max-sm:self-center max-sm:mt-4
+}
+.nums{
+    @apply flex gap-4 flex-wrap
+}
+.choseNum p{
+    @apply font-bold max-sm:self-center
+}
+.diceContainer{
+    @apply w-fit max-sm:h-[600px] flex flex-col flex-wrap items-center justify-center gap-4
+}
+.diceContainer p{
+    @apply text-xl font-semibold
+}
+.gameBtn{
+    @apply w-fit flex flex-col justify-center items-center gap-4 mt-3
+}
+.gameRules{
+    @apply flex gap-2 flex-wrap flex-col max-lg:px-6 max-sm:mt-[-100px] bg-pink-200 p-5 border-2 max-sm:m-4
+}
+.gameRules h2{
+    @apply text-xl font-bold pb-3
+}
