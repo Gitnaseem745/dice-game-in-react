@@ -30,10 +30,10 @@ Check out the live demo of the project here: [Dice Game](https://dice-game-in-re
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Gitnaseem745/dice-game.git
+   git clone https://github.com/Gitnaseem745/dice-game-in-react.git
 2. Navigate to the project directory:
    ```bash
-   cd dice-game
+   cd dice-game-in-react
 3. Install the dependencies:
    ```bash
    npm install
